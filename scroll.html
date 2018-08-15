@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>冲鸭 何远清</title>
+    <style>
+        .scroll{
+            overflow: hidden;
+            height: 120px;
+            background-color: #cccccc;
+            border: 1px solid #7f7f7f;
+        }
+    </style>
+</head>
+<body>
+<div class="scroll">
+    <div class="content1">
+        <p>何远清 冲鸭！！！</p>
+        <p>何远清 冲鸭！！！</p>
+        <p>何远清 冲鸭！！！</p>
+        <p>何远清 冲鸭！！！</p>
+        <p>何远清 冲鸭！！！</p>
+        <p>何远清 冲鸭！！！</p>
+        <p>何远清 冲鸭！！！</p>
+    </div>
+    <div class="content2"></div>
+</div>
+<script>
+    (function scroll(){
+        let scroll = document.getElementsByClassName("scroll")[0],
+            inner1 = document.getElementsByClassName("content1")[0],
+            inner2 = document.getElementsByClassName("content2")[0],
+            speed = 20;
+        inner2.innerHTML= inner1.innerHTML;
+
+        function marquee(){
+            if(inner1.offsetHeight<=scroll.scrollTop){
+                scroll.scrollTop=0;
+            }
+            else{
+                scroll.scrollTop++;
+            }
+        }
+        let interval = setInterval(marquee,speed);
+
+        scroll.onmouseover=function(){
+            clearInterval(interval);
+        };
+        scroll.onmouseout=function(){
+          interval = setInterval(marquee,speed);
+        }
+    })()
+</script>
+</body>
+</html>
