@@ -1,3 +1,4 @@
+
 Array.prototype.makeReducer=function(){
     if (arguments.length < 1) {
         throw "need some arg";
