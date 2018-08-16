@@ -11,12 +11,12 @@ function maxCount(arr) {
             res[value] = 1;
         }
     });
-   let max=0,maxIndex;
-   for(let i in res){
-       if(res[i]>max){
-           max=res[i];
-           maxIndex=i;
-       }
+    let max = 0, maxIndex;
+    for (let i in res) {
+        if (res[i] > max) {
+            max = res[i];
+            maxIndex = i;
+        }
     }
     return maxIndex;
 
