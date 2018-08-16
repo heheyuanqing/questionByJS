@@ -22,6 +22,26 @@ function maxCount(arr) {
 
 }
 
-arr = [1, 2, 3, 4, 1, 3, 6];
-console.log(maxCount(arr));
+function max(arr){
+    let map=new Map();
+    arr.map((value)=>{
+        if(map.has(value)){
+            let n=map.get(value)+1;
+            map.set(value,n);
+        }else{
+            map.set(value,1);
+        }
+    });
+    let mapValue = Array.from(map.values());
+    let max=Math.max.apply(null,mapValue);
+    for(let key of map.keys()){
+        if(max === map.get(key)){
+            return key;
+        }
+    }
+
+}
+
+arr = [1, 2, 3, 4, 1, 1, 6];
+console.log(max(arr));
 
