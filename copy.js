@@ -7,6 +7,7 @@ function deepCopy(inital,final){
 
     for(var i in inital){
         var prop = inital[i];
+        //防止循环引用
         if(prop===newObj){
             continue;
         }
