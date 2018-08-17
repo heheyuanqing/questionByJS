@@ -13,3 +13,5 @@
 6.[出现次数最多的](https://github.com/heheyuanqing/questionByJS/blob/master/maxCountNum.js)
 
 7.[使用setimeout实现setInterval](https://github.com/heheyuanqing/questionByJS/blob/master/setInterval.js)
+
+8.[数组去重&拍平](https://github.com/heheyuanqing/questionByJS/blob/master/removal.js)
