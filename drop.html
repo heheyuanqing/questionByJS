@@ -41,6 +41,7 @@
         e.preventDefault();
         var food =e.dataTransfer.getData('food');
         var ans = document.getElementById(food);
+        console.log(ans.getBoundingClientRect());
         ans.style.listStyle='none';
         e.target.appendChild(ans);
     }

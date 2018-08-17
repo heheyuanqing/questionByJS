@@ -12,4 +12,4 @@
 
 6.[出现次数最多的](https://github.com/heheyuanqing/questionByJS/blob/master/maxCountNum.js)
 
-7.[使用setimeout实现setInterval]()
+7.[使用setimeout实现setInterval](https://github.com/heheyuanqing/questionByJS/blob/master/setInterval.js)
