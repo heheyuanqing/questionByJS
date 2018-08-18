@@ -15,3 +15,7 @@
 7.[使用setimeout实现setInterval](https://github.com/heheyuanqing/questionByJS/blob/master/setInterval.js)
 
 8.[数组去重&拍平](https://github.com/heheyuanqing/questionByJS/blob/master/removal.js)
+
+9.[模拟call/apply/bind]()
+
+10.[js实现大数相加]()
