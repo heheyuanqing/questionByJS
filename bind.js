@@ -1,3 +1,10 @@
+/*
+* 返回一个函数，且函数中this指向传入的参数
+*
+* 思路：
+* 1.保存原有参数
+* 2.返回一个函数，使用apply改变this指向同时传入bind时参数及现在的参数
+* */
 Function.prototype.makeBind=function (thisArg){
     let fn=this;
     let arg=[].slice.call(arguments,1);
@@ -26,4 +33,5 @@ function f(){
 }
 var o = {};
 var s = f.makeBind(o, 3, 4);
+console.log(s.prototype);
 s(1,2);

@@ -12,10 +12,12 @@ Function.prototype.makeCall = function (context) {
     context = context || window;
     context.fn = this;
 
-    let args = [];
-    for (let i = 1, len = arguments.length; i < len; i++) {
+    /* let args = [];
+   for (let i = 1, len = arguments.length; i < len; i++) {
         args.push('arguments[' + i + ']');
-    }
+    }*/
+    let args=[].slice.call(arguments,1);
+
 
     //计算字符串执行代码
     let res = eval('context.fn(' + args + ')');
@@ -54,4 +56,5 @@ let bar = function (grade, age) {
     }
 };
 var a = bar.makeApply(foo, ["class-2", "18"]);
+// var a=bar.makeCall(foo,1,1);
 console.log(a);
