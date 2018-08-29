@@ -38,7 +38,8 @@ Function.prototype.makeApply = function (context,arr) {
     for(let i=0,len=arr.length;i<len;i++){
         args.push('arr['+i+']');
     }
-    let res = eval('context.fn(' + args + ')');
+    // let res = eval('context.fn(' + args + ')');
+    let res = context.fn(...args);
 
     delete context.fn;
     return res;
@@ -48,6 +49,7 @@ let foo = {
     name: 'hyq',
 };
 let bar = function (grade, age) {
+    console.log(arguments);
     console.log(this.name);
     return {
         name: this.name,
@@ -57,4 +59,5 @@ let bar = function (grade, age) {
 };
 var a = bar.makeApply(foo, ["class-2", "18"]);
 // var a=bar.makeCall(foo,1,1);
-console.log(a);
+// console.log(a);
+
